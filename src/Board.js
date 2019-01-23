@@ -22,7 +22,6 @@ class Board extends Component{
 			squares: squares,
 			xIsNext: !this.state.xIsNext,
 		});
-
 	}
 
 	renderSquare(i)	{
@@ -32,11 +31,11 @@ class Board extends Component{
 	}
 
 	render(){
-
 		const winner = calculateWinner(this.state.squares);
 		let status ;
+
 		if(winner){
-			status = 'Winner' + winner
+			status = 'Winner => ' + " ' " + winner + " ' ";
 		}else{
 			status = "Next Player: " + (this.state.xIsNext ? 'X' : 'O')
 		}
@@ -62,8 +61,6 @@ class Board extends Component{
 			</div>
 		)
 	}
-
-
 }
 
 export default Board
